@@ -10,7 +10,7 @@ pipeline {
 
                      echo "Building" 
                   
-                     echo "{params.HELLO}"
+                     echo "${params.HELLO}"
 
                    }
          }
