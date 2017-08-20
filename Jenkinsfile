@@ -12,7 +12,7 @@ pipeline {
                     }
                }
                
-               step {
+               steps {
                     sh '''
                      echo "Hello Welcome to Shell"
                      
