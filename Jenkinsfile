@@ -6,10 +6,12 @@ pipeline {
           stage ('Build') {
                
                when {
-                    expression {
+                    allof {
                          
-                         "Foo" == "bar"
-                    }
+                         not { branch 'master' }
+                    }    
+                 
+                  }
                }
                
                steps {
