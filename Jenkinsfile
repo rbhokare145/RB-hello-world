@@ -3,8 +3,11 @@ pipeline {
      agent any 
      
      stages {
+          
           stage('Browser test') { 
-          parallel {
+               
+            parallel {
+               
                stage ('Chrome') { 
                     steps {      
                                 sh ''' 
