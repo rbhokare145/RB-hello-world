@@ -6,14 +6,14 @@ pipeline {
           stage('Browser test') { 
           parallel {
                stage ('Chrome') { 
-                    steps{      
+                    steps {      
                                 sh ''' 
                                 echo "Testing on Chrome"
                                 '''
                     }
                }
              
-               stage('Firefox') {
+               stage ('Firefox') {
                     steps {
                            sh '''
                            echo "Testing on Firefox"
