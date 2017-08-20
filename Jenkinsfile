@@ -6,7 +6,7 @@ pipeline {
           stage ('Build') {
                
                when {
-                    allof {
+                    allOf {
                          
                          not { branch 'master' }
                     }    
