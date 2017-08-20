@@ -15,11 +15,14 @@ pipeline {
                step {
                     sh '''
                      echo "Hello Welcome to Shell"
-                    '''
+                     
+                     '''
                }
                
           }
      }
      
+}
+
      
    
