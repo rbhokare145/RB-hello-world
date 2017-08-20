@@ -1,30 +1,29 @@
 pipeline {
+     
      agent any 
-   
-     stages { 
-          
-          stage ('Build') {
-               
-               when {
-                    allOf {
-                         
-                         not { branch 'master' }
-                    }    
-                 
-                  
+     
+     stages {
+          stage('Browser test') { 
+          parallel {
+               stage ('Chrome') { 
+                    steps{      
+                                sh ''' 
+                                echo "Testing on Chrome"
+                                '''
+                    }
                }
-               
-               steps {
-                    sh '''
-                     echo "Hello Welcome to Shell"
-                     
-                     '''
+             
+               stage('Firefox') {
+                    steps {
+                           sh '''
+                           echo "Testing on Firefox"
+                          }
                }
                
           }
-     }
-     
-}
-
-     
-   
+       }
+       
+    }
+    
+    }
+    
