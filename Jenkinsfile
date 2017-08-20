@@ -1,14 +1,14 @@
 pipeline {
  agent any
  stages {
- stage(‘Browser Tests’) {
+ stage('BrowserTests') {
  parallel {
- stage(‘Chrome’) {
+ stage('Chrome') {
  steps {
  echo “Chrome Tests”
  }
  }
- stage(‘Firefox’) {
+ stage('Firefox') {
  steps {
  echo “Firefox Tests”
  }
@@ -17,5 +17,3 @@ pipeline {
  }
  }
 }
-STAGE SETTINGS
-environment, post, a
