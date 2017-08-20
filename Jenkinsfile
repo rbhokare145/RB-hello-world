@@ -11,7 +11,7 @@ pipeline {
                          not { branch 'master' }
                     }    
                  
-                  }
+                  
                }
                
                steps {
