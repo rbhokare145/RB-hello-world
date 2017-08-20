@@ -1,45 +1,25 @@
-pipeline { 
-
-     agent any  
-
-      stages { 
- 
+pipeline {
+     agent any 
+   
+     stages { 
+          
           stage ('Build') {
-
-             steps {
-
-                     echo "Building" 
-                  
-                     echo "${params.HELLO}"
-
-                   }
-         }
-
-       
-         stage ('Test') {
-
-            steps { 
- 
-                    echo "Testing" 
-
-                  }
-
-         }
-
-
-
-
-         stage ('Deploy') {
-
-             steps {
-
-                       echo  "Deploying"
-
-
-                   }
-
-         }
- 	
-   }
-}
-
+               
+               when {
+                    expression {
+                         
+                         "Foo" == "bar"
+                    }
+               }
+               
+               step {
+                    sh '''
+                     echo "Hello Welcome to Shell"
+                    '''
+               }
+               
+          }
+     }
+     
+     
+   
