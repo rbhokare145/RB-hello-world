@@ -1,33 +1,21 @@
 pipeline {
-     
-     agent any 
-     
-     stages {
-          
-          stage('Browser test') { 
-               
-            parallel {
-               
-               stage ('Chrome') { 
-                    steps {      
-                                sh ''' 
-                                echo "Testing on Chrome"
-                                '''
-                    }
-               }
-             
-               stage ('Firefox') {
-                    steps {
-                           sh '''
-                           echo "Testing on Firefox"
-                           '''
-                          }
-               }
-               
-          }
-       }
-       
-    }
-    
+ agent any
+ stages {
+ stage(‘Browser Tests’) {
+ parallel {
+ stage(‘Chrome’) {
+ steps {
+ echo “Chrome Tests”
  }
-    
+ }
+ stage(‘Firefox’) {
+ steps {
+ echo “Firefox Tests”
+ }
+ }
+ }
+ }
+ }
+}
+STAGE SETTINGS
+environment, post, a
