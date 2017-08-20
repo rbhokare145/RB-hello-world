@@ -17,6 +17,7 @@ pipeline {
                     steps {
                            sh '''
                            echo "Testing on Firefox"
+                           '''
                           }
                }
                
@@ -25,5 +26,5 @@ pipeline {
        
     }
     
-    }
+ }
     
